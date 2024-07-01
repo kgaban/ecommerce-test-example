@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Shopping Cart</title>
+</head>
+
+<body>
+  <h1>Shopping Cart</h1>
+  <ul>
+    {% for item in cart_items %}
+    <li>
+      <h2 class="cart-item-name">{{ item.name }}</h2>
+      <p>Price: ${{ item.price }}</p>
+      <!-- Button to remove item from cart -->
+      <form action="/remove-from-cart/{{ item.id }}" method="post">
+        <button type="submit">Remove from Cart</button>
+      </form>
+    </li>
+    {% endfor %}
+  </ul>
+
+  <!-- Button to navigate back to the home page -->
+  <a href="/" class="home-link">
+    <button>Back to Products</button>
+  </a>
+</body>
+
+</html>

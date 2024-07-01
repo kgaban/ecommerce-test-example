@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Ecommerce Website</title>
+</head>
+
+<body>
+  <h1>Products</h1>
+  <ul>
+    {% for product in products %}
+    <li id="product-{{ product.id }}">
+      <h2>{{ product.name }}</h2>
+      <p>Price: ${{ product.price }}</p>
+      <form action="/add-to-cart/{{ product.id }}" method="post">
+        <button type="submit" id="add-to-cart-button">Add to Cart</button>
+      </form>
+    </li>
+    {% endfor %}
+  </ul>
+
+  <!-- Button to navigate to the cart page -->
+  <a href="/cart" class="cart-link">
+    <button>View Cart</button>
+  </a>
+</body>
+
+</html>
