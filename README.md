@@ -1,4 +1,4 @@
-# Simple Flask Application
+# Flask E-Commerce Website and Playwright Testing Example
 
 This is a simple Flask application that serves as an example of building a REST API with Swagger documentation. The application includes endpoints that read from dictionaries and also interfaces with external APIs. It provides functionality to retrieve Kevin's favorites based on a specified topic and fetches a random joke from the JokeAPI.
 
